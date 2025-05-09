@@ -355,6 +355,62 @@ li {
   margin-top: 1rem;
 }
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.hero-img-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(99,102,241,0.18);
+  border: 4px solid #fff;
+  background: #e0e7ff;
+  display: block;
+}
+.hero-text {
+  flex: 1 1 250px;
+  min-width: 220px;
+  text-align: left;
+}
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+}
+.hero-text p {
+  color: #f3f4f6;
+  font-size: 1.2rem;
+}
+@media (max-width: 700px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+  }
+}
+
 /* Projects section */
 .projects-grid {
   display: grid;

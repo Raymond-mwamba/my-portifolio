@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import MobileNav from './components/MobileNav';
 import './App.css';
+import profileImg from './assets/profile.jpg';
 
 function App() {
   return (
@@ -20,9 +21,19 @@ function App() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="hero-content"
         >
-          <h1>Welcome to My Portfolio</h1>
-          <p>Hi, I'm a Full Stack Developer passionate about creating amazing web experiences.</p>
+          <div className="hero-img-wrapper">
+            <img
+              src={profileImg}
+              alt="Profile"
+              className="profile-img"
+            />
+          </div>
+          <div className="hero-text">
+            <h1>Raymond Mwamba</h1>
+            <p>Hi, I'm a Web  Developer passionate about creating amazing web experiences.</p>
+          </div>
         </motion.div>
       </section>
 
