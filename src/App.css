@@ -369,14 +369,15 @@ li {
   justify-content: center;
 }
 .profile-img {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 24px rgba(99,102,241,0.18);
   border: 4px solid #fff;
   background: #e0e7ff;
   display: block;
+  margin-bottom: 1.5rem;
 }
 .hero-text {
   flex: 1 1 250px;
@@ -401,6 +402,10 @@ li {
   .hero-text {
     text-align: center;
   }
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -408,6 +413,25 @@ li {
     width: 90px;
     height: 90px;
     margin-bottom: 1rem;
+  }
+}
+
+.hero-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  align-items: center;
+}
+.hero-icons .footer-icon {
+  color: #6366f1;
+  transition: color 0.2s;
+}
+.hero-icons .footer-icon:hover {
+  color: #25d366;
+}
+@media (max-width: 700px) {
+  .hero-icons {
+    justify-content: center;
   }
 }
 
@@ -660,6 +684,21 @@ a, button, .projects li {
   letter-spacing: 0.02em;
   margin-top: 2rem;
 }
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-icon {
+  color: #6366f1;
+  transition: color 0.2s;
+}
+.footer-icon:hover {
+  color: #25d366;
+}
+
 @media (max-width: 700px) {
   .footer {
     font-size: 0.95rem;
