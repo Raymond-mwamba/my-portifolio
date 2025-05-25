@@ -1,0 +1,371 @@
+/* Modern Dark Blue Portfolio Theme */
+:root {
+    /* Primary Dark Blue Color Palette */
+    --primary-blue: #1e3a8a;
+    --dark-blue: #0f172a;
+    --medium-blue: #1e40af;
+    --light-blue: #3b82f6;
+    --accent-blue: #60a5fa;
+    --hover-blue: #2563eb;
+
+    /* Background Colors */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #334155;
+    --bg-hover: #475569;
+
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-accent: #60a5fa;
+
+    /* Border and Shadow Colors */
+    --border-color: #475569;
+    --shadow-color: rgba(30, 58, 138, 0.15);
+    --glow-color: rgba(96, 165, 250, 0.3);
+}
+
+/* Force dark theme - using actual color values to ensure it works */
+html {
+    background: #0f172a !important;
+}
+
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 100vh !important;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%) !important;
+    color: #f8fafc !important;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+}
+
+#root {
+    background: transparent !important;
+    min-height: 100vh !important;
+}
+
+/* Ensure root container gets the theme */
+.container-fluid {
+    background: transparent !important;
+}
+
+/* Dark Blue Theme Components */
+.bg-primary {
+    background-color: #1e3a8a !important;
+}
+
+.btn-primary {
+    background-color: #1e40af !important;
+    border-color: #3b82f6 !important;
+    color: #f8fafc !important;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb !important;
+    border-color: #60a5fa !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.15);
+}
+
+.btn-outline-primary {
+    color: #60a5fa !important;
+    border-color: #60a5fa !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #60a5fa !important;
+    border-color: #60a5fa !important;
+    color: #0f172a !important;
+}
+
+.text-primary {
+    color: #60a5fa !important;
+}
+
+.badge {
+    background-color: #334155 !important;
+    color: #cbd5e1 !important;
+    border: 1px solid #475569;
+}
+
+/* Section Styling */
+section {
+    background: #1e293b !important;
+    border: 1px solid #475569;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 1.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    background: #334155 !important;
+    border: 1px solid #475569 !important;
+    color: #f8fafc !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.15) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(96, 165, 250, 0.3) !important;
+    border-color: #60a5fa !important;
+}
+
+.card-body {
+    background: transparent !important;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(15, 23, 42, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(30, 58, 138, 0.15);
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #475569;
+}
+
+.navbar .navbar-brand {
+    color: #f8fafc !important;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    background: #60a5fa !important;
+    color: #0f172a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 50%, #1e40af 100%);
+    color: #f8fafc;
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.15);
+    transition: all 0.4s ease-in-out;
+    border: 1px solid #475569;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(96, 165, 250, 0.3) 0%, transparent 50%);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+#hero .btn {
+    font-weight: 600;
+    border-radius: 2rem;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: #334155 !important;
+    border: 1px solid #475569 !important;
+    color: #f8fafc !important;
+    border-radius: 8px !important;
+}
+
+.form-control:focus {
+    background-color: #334155 !important;
+    border-color: #60a5fa !important;
+    box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.3) !important;
+    color: #f8fafc !important;
+}
+
+.form-control::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Links */
+a {
+    color: #60a5fa !important;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #f8fafc !important;
+    text-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+}
+
+/* Social media buttons */
+.btn-outline-light {
+    border-color: #475569 !important;
+    color: #cbd5e1 !important;
+}
+
+.btn-outline-light:hover {
+    background-color: #60a5fa !important;
+    border-color: #60a5fa !important;
+    color: #0f172a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    background: #1e293b;
+    color: #cbd5e1;
+    font-size: 1rem;
+    transition: all 0.4s ease-in-out;
+    border-top: 1px solid #475569;
+    box-shadow: 0 -4px 20px rgba(30, 58, 138, 0.15);
+}
+
+/* Animation Classes */
+.glow-on-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3), 0 0 40px rgba(96, 165, 250, 0.3), 0 0 60px rgba(96, 165, 250, 0.3);
+    transform: translateY(-5px);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #60a5fa, #3b82f6, #1e40af);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.3);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(96, 165, 250, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(96, 165, 250, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    section {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 1.2rem 0.5rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* Utility Classes */
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Hover effects */
+.hover-shadow {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-5px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+}
+
+/* Selection styling */
+::selection {
+    background: #60a5fa;
+    color: #0f172a;
+}

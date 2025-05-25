@@ -1,103 +1,207 @@
-import { motion } from 'framer-motion';
 import MobileNav from './components/MobileNav';
 import './App.css';
 import profileImg from './assets/profile.jpg';
 
 function App() {
+  // Dark blue theme should now be working!
   return (
     <>
-      <div className="app">
-        <nav className="desktop-nav">
-          <a href="#hero">Hero</a>
-          <a href="#about">About Me</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+      <div className="container-fluid px-0">
+        {/* Desktop Navigation */}
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top d-none d-lg-block">
+          <div className="container">
+            <a className="navbar-brand fw-bold fs-4" href="#hero">Raymond Mwamba</a>
+            <div className="navbar-nav ms-auto">
+              <a className="nav-link mx-2 fw-medium" href="#hero">Hero</a>
+              <a className="nav-link mx-2 fw-medium" href="#about">About Me</a>
+              <a className="nav-link mx-2 fw-medium" href="#projects">Projects</a>
+              <a className="nav-link mx-2 fw-medium" href="#skills">Skills</a>
+              <a className="nav-link mx-2 fw-medium" href="#contact">Contact</a>
+            </div>
+          </div>
         </nav>
 
+        {/* Mobile Navigation */}
         <MobileNav />
 
-        <section id="hero" className="section hero">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="hero-content"
-          >
-            <div className="hero-img-wrapper">
-              <img
-                src={profileImg}
-                alt="Profile"
-                className="profile-img"
-              />
+        {/* Main Content with minimal top padding for fixed navbar */}
+        <main style={{ paddingTop: '8px' }}>
+          {/* Hero Section */}
+          <section id="hero" className="container py-4 rounded-3">
+            <div className="row align-items-center min-vh-75 py-5">
+              <div className="col-lg-4 col-md-5 text-center mb-4 mb-md-0">
+                <img
+                  src={profileImg}
+                  alt="Profile"
+                  className="rounded-circle img-fluid border border-4 shadow-lg float-animation glow-on-hover"
+                  style={{
+                    width: 'min(300px, 80vw)',
+                    height: 'min(300px, 80vw)',
+                    objectFit: 'cover',
+                    maxWidth: '300px',
+                    maxHeight: '300px',
+                    borderColor: 'var(--accent-blue)'
+                  }}
+                />
+              </div>
+              <div className="col-lg-8 col-md-7 text-center text-md-start">
+                <h1 className="display-3 fw-bold mb-3 gradient-text">Raymond Mwamba</h1>
+                <p className="lead fs-4 mb-4" style={{ color: 'var(--text-secondary)' }}>
+                  Hi, I'm a Web Developer passionate about creating amazing web experiences with modern technologies.
+                </p>
+                <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
+                  <a href="https://github.com/Raymond-Mwamba" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-lg d-flex align-items-center gap-2 glow-on-hover" aria-label="GitHub">
+                    <i className="bi bi-github"></i> <span>GitHub</span>
+                  </a>
+                  <a href="https://wa.me/255753371512" target="_blank" rel="noopener noreferrer" className="btn btn-success btn-lg d-flex align-items-center gap-2 glow-on-hover" aria-label="WhatsApp">
+                    <i className="bi bi-whatsapp"></i> <span>WhatsApp</span>
+                  </a>
+                  <a href="mailto:mwambah92@gmail.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg d-flex align-items-center gap-2 pulse-animation" aria-label="Email">
+                    <i className="bi bi-envelope"></i> <span>Email</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="hero-text">
-              <h1>Raymond Mwamba</h1>
-              <p>Hi, I'm a Web  Developer passionate about creating amazing web experiences.</p>
-              <div className="hero-icons">
-                <a href="https://github.com/Raymond-Mwamba" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="footer-icon"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"></path></svg>
-                </a>
-                <a href="https://wa.me/255753371512" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                  <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" className="footer-icon"><path d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.6 4.47 1.74 6.41L3.2 28.8l6.56-1.71c1.87 1.02 3.98 1.56 6.24 1.56h.01c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.33-6.64-3.75-9.06-2.42-2.42-5.64-3.75-9.06-3.75zm0 23.2c-2.01 0-3.98-.54-5.68-1.56l-.41-.24-3.89 1.01 1.04-3.78-.27-.43c-1.08-1.7-1.65-3.67-1.65-5.7 0-5.79 4.71-10.5 10.5-10.5 2.81 0 5.45 1.1 7.43 3.08 1.98 1.98 3.07 4.62 3.07 7.42 0 5.79-4.71 10.5-10.5 10.5zm5.77-7.93c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.23-.69.08-.32-.16-1.36-.5-2.59-1.59-.96-.86-1.61-1.92-1.8-2.24-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.62-.53-.54-.71-.55-.18-.01-.4-.01-.62-.01-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.65 0 1.56 1.15 3.06 1.31 3.27.16.21 2.27 3.47 5.51 4.73.77.33 1.37.53 1.84.68.77.25 1.47.21 2.02.13.62-.09 1.89-.77 2.16-1.51.27-.74.27-1.37.19-1.51-.08-.14-.29-.21-.61-.37z"></path></svg>
-                </a>
-                <a href="mailto:mwambah92@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="footer-icon"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </a>
-              </div> {/* Closing hero-text div */}
-            </div> {/* Closing hero-text div */}
-          </motion.div> {/* Closing motion.div */}
-        </section> {/* Closing hero section */}
+          </section>
 
-        <section id="about" className="section about">
-          <h2>About Me</h2>
-          <p>I specialize in building modern web applications using React, TypeScript, and other cutting-edge technologies.</p>
-        </section>
-
-        <section id="projects" className="section projects">
-          <h2>Projects</h2>
-          <p>Here are some of my recent projects:</p>
-          <ul>
-            <li>Project 1 - A sample project description</li>
-            <li>Project 2 - Another sample project description</li>
-          </ul>
-        </section>
-
-        <section id="skills" className="section skills">
-          <h2>Skills</h2>
-          <ul>
-            <li>Frontend Development</li>
-            <li>Backend Development</li>
-            <li>Database Design</li>
-            <li>UI/UX Design</li>
-          </ul>
-        </section>
-
-        <section id="contact" className="section contact">
-          <h2>Contact Me</h2>
-          <form>
-            <div className="form-group">
-              <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" />
+          {/* About Section */}
+          <section id="about" className="py-5">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-8">
+                  <h2 className="display-5 fw-bold text-center mb-4 gradient-text">About Me</h2>
+                  <div className="card border-0 shadow-sm glow-on-hover">
+                    <div className="card-body p-4">
+                      <p className="fs-5 lh-lg" style={{ color: 'var(--text-secondary)' }}>
+                        I specialize in building modern web applications using React, TypeScript, and other cutting-edge technologies.
+                        With a passion for clean code and user-centered design, I create digital experiences that are both beautiful and functional.
+                      </p>
+                      <p className="fs-5 lh-lg mb-0" style={{ color: 'var(--text-secondary)' }}>
+                        I'm always eager to learn new technologies and take on challenging projects that push the boundaries of what's possible on the web.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" rows={5}></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-          </form>
-        </section>
-      </div> {/* Closing app div */}
+          </section>
 
-      <footer className="footer">
-        <div>
-          © {new Date().getFullYear()} M.R tech solutions. All rights reserved.
+          {/* Projects Section */}
+          <section id="projects" className="py-5">
+            <div className="container">
+              <h2 className="display-5 fw-bold text-center mb-5 gradient-text">Projects</h2>
+              <div className="row g-4">
+                <div className="col-lg-6">
+                  <div className="card h-100 border-0 shadow-sm hover-shadow glow-on-hover">
+                    <div className="card-body p-4">
+                      <h5 className="card-title fw-bold" style={{ color: 'var(--accent-blue)' }}>Comprehensive School Management System for Secondary Education</h5>
+                      <p className="card-text" style={{ color: 'var(--text-secondary)' }}>This is a web-based School Management System designed specifically for secondary schools, enabling efficient administration, student management and academic tracking. This project current I'm doing with my team, not my self soon will be released 🙏🏾</p>
+                      <div className="d-flex gap-2 flex-wrap">
+                        <span className="badge">PHP</span>
+                        <span className="badge">JavaScript</span>
+                        <span className="badge">MySQL</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="card h-100 border-0 shadow-sm hover-shadow glow-on-hover">
+                    <div className="card-body p-4">
+                      <h5 className="card-title fw-bold" style={{ color: 'var(--accent-blue)' }}>Idustrial Practical Training Management Platform</h5>
+                      <p className="card-text" style={{ color: 'var(--text-secondary)' }}>A comprehensive web-based student portal system designed to manage IPT activities. The system provides a centralized platform for students to manage their IPT applications, track training progress through digital logbooks and maintain records of their practical learning. </p>
+                      <div className="d-flex gap-2 flex-wrap mb-3">
+                        <span className="badge">PHP</span>
+                        <span className="badge">Bootstrap</span>
+                        <span className="badge">MySQL</span>
+                      </div>
+                      <a href="https://assignment-task.iceiy.com" target="_blank" rel="noopener noreferrer"
+                        className="btn btn-outline-primary btn-sm pulse-on-hover d-inline-flex align-items-center gap-2">
+                        <i className="bi bi-globe"></i>
+                        Visit Live Project
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Skills Section */}
+          <section id="skills" className="py-5">
+            <div className="container">
+              <h2 className="display-5 fw-bold text-center mb-5 gradient-text">Skills</h2>
+              <div className="row justify-content-center">
+                <div className="col-lg-10">
+                  <div className="d-flex flex-wrap gap-3 justify-content-center">
+                    <span className="badge fs-6 p-3 glow-on-hover">Frontend Development</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">Backend Development</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">Database Design</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">UI/UX Design</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">React</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">TypeScript</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">Node.js</span>
+                    <span className="badge fs-6 p-3 glow-on-hover">Bootstrap</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section id="contact" className="py-5">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-8">
+                  <h2 className="display-5 fw-bold text-center mb-5 gradient-text">Contact Me</h2>
+                  <div className="card border-0 shadow-lg glow-on-hover">
+                    <div className="card-body p-5">
+                      <form>
+                        <div className="row">
+                          <div className="col-md-6 mb-3">
+                            <label htmlFor="name" className="form-label fw-medium" style={{ color: 'var(--text-secondary)' }}>Name</label>
+                            <input type="text" id="name" name="name" className="form-control form-control-lg" required />
+                          </div>
+                          <div className="col-md-6 mb-3">
+                            <label htmlFor="email" className="form-label fw-medium" style={{ color: 'var(--text-secondary)' }}>Email</label>
+                            <input type="email" id="email" name="email" className="form-control form-control-lg" required />
+                          </div>
+                        </div>
+                        <div className="mb-4">
+                          <label htmlFor="message" className="form-label fw-medium" style={{ color: 'var(--text-secondary)' }}>Message</label>
+                          <textarea id="message" name="message" rows={6} className="form-control form-control-lg" required></textarea>
+                        </div>
+                        <div className="text-center">
+                          <button type="submit" className="btn btn-primary btn-lg px-5 py-3 pulse-animation">
+                            <i className="bi bi-send me-2"></i>Send Message
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer className="footer mt-5 py-4 text-center">
+        <div className="container">
+          <span style={{ color: 'var(--text-secondary)' }}>© {new Date().getFullYear()} M.R tech solutions. All rights reserved.</span>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/255753371512?text=Hello%20Raymond!%20I'm%20interested%20in%20your%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp"
+        aria-label="Contact us on WhatsApp"
+        title="Chat with us on WhatsApp"
+      >
+        <i className="bi bi-whatsapp"></i>
+      </a>
     </>
   );
 }
