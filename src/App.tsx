@@ -107,7 +107,7 @@ function App() {
                 <div className="col-lg-6">
                   <div className="card h-100 border-0 shadow-sm hover-shadow glow-on-hover">
                     <div className="card-body p-4">
-                      <h5 className="card-title fw-bold" style={{ color: 'var(--accent-blue)' }}>Idustrial Practical Training Management Platform</h5>
+                      <h5 className="card-title fw-bold" style={{ color: 'var(--accent-blue)' }}>Industrial Practical Training Management Platform</h5>
                       <p className="card-text" style={{ color: 'var(--text-secondary)' }}>A comprehensive web-based student portal system designed to manage IPT activities. The system provides a centralized platform for students to manage their IPT applications, track training progress through digital logbooks and maintain records of their practical learning. </p>
                       <div className="d-flex gap-2 flex-wrap mb-3">
                         <span className="badge">PHP</span>
