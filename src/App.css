@@ -517,3 +517,26 @@ section {
     margin-bottom: 0;
   }
 }
+
+/* Contact Form Styling */
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #10b981 !important;
+}
+
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+  color: #ef4444 !important;
+}
+
+.form-control.is-invalid {
+  border-color: rgba(239, 68, 68, 0.6) !important;
+  background-image: none;
+}
+
+.form-control.is-valid {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  background-image: none;
+}

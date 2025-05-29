@@ -1,4 +1,5 @@
 import MobileNav from './components/MobileNav';
+import ContactForm from './components/ContactForm';
 import './App.css';
 import profileImg from './assets/profile.jpg';
 
@@ -181,27 +182,7 @@ function App() {
                   <h2 className="display-5 fw-bold text-center mb-5 gradient-text">Contact Me</h2>
                   <div className="card border-0 shadow-lg glow-on-hover">
                     <div className="card-body p-5">
-                      <form>
-                        <div className="row">
-                          <div className="col-md-6 mb-3">
-                            <label htmlFor="name" className="form-label fw-medium" style={{ color: 'var(--text-secondary)' }}>Name</label>
-                            <input type="text" id="name" name="name" className="form-control form-control-lg" required />
-                          </div>
-                          <div className="col-md-6 mb-3">
-                            <label htmlFor="email" className="form-label fw-medium" style={{ color: 'var(--text-secondary)' }}>Email</label>
-                            <input type="email" id="email" name="email" className="form-control form-control-lg" required />
-                          </div>
-                        </div>
-                        <div className="mb-4">
-                          <label htmlFor="message" className="form-label fw-medium" style={{ color: 'var(--text-secondary)' }}>Message</label>
-                          <textarea id="message" name="message" rows={6} className="form-control form-control-lg" required></textarea>
-                        </div>
-                        <div className="text-center">
-                          <button type="submit" className="btn btn-primary btn-lg px-5 py-3 pulse-animation">
-                            <i className="bi bi-send me-2"></i>Send Message
-                          </button>
-                        </div>
-                      </form>
+                      <ContactForm />
                     </div>
                   </div>
                 </div>
