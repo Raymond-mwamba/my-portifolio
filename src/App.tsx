@@ -164,12 +164,8 @@ function App() {
                 <div className="col-lg-10">
                   <div className="d-flex flex-wrap gap-3 justify-content-center">
                     <span className="badge fs-6 p-3 glow-on-hover">Frontend Development</span>
-                    <span className="badge fs-6 p-3 glow-on-hover">Backend Development</span>
-                    <span className="badge fs-6 p-3 glow-on-hover">Database Design</span>
-                    <span className="badge fs-6 p-3 glow-on-hover">UI/UX Design</span>
                     <span className="badge fs-6 p-3 glow-on-hover">React</span>
                     <span className="badge fs-6 p-3 glow-on-hover">TypeScript</span>
-                    <span className="badge fs-6 p-3 glow-on-hover">Node.js</span>
                     <span className="badge fs-6 p-3 glow-on-hover">Bootstrap</span>
                   </div>
                 </div>
