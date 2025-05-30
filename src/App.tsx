@@ -135,7 +135,7 @@ function App() {
                           Industrial Practical Training Management Platform
                         </h5>
                         <p className="card-text project-description mb-4" style={{ color: 'var(--text-secondary)' }}>
-                          A comprehensive web-based student portal system designed to manage IPT activities. The system provides a centralized platform for students to manage their IPT applications, track training progress through digital logbooks and maintain records of their practical learning.
+                          A comprehensive web-based student portal system designed to manage IPT activities. The system provides a centralized platform for students to manage their IPT applications, track training progress through digital logbooks and maintain records of their practical learning.(username : <strong>STU12345</strong>, password: <strong>password123</strong>)
                         </p>
                         <div className="project-tech d-flex gap-2 flex-wrap mb-4">
                           <span className="badge tech-badge">PHP</span>
