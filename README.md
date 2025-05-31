@@ -111,4 +111,4 @@ For detailed deployment instructions, see [DEPLOYMENT-GUIDE.md](./DEPLOYMENT-GUI
 
 ## 📄 License
 
-© 2025 M.R tech solutions. All rights reserved.
+© 2025 M.R Tech Solution. All rights reserved.

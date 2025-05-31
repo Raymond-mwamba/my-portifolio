@@ -194,7 +194,7 @@ function App() {
 
       <footer className="footer mt-5 py-4 text-center">
         <div className="container">
-          <span style={{ color: 'var(--text-secondary)' }}>© {new Date().getFullYear()} M.R tech solutions. All rights reserved.</span>
+          <span style={{ color: 'var(--text-secondary)' }}>© {new Date().getFullYear()} M.R Tech Solution. All rights reserved.</span>
         </div>
       </footer>
 
